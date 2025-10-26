@@ -99,6 +99,7 @@ public class OrderItemServiceImpl implements OrderItemService {
      */
     @Override
     public OrderItemDto updateOrderItem(OrderItemDto orderItemDto) {
+        // dummy comment
         Order order = this.orderRepo.findById(orderItemDto.getOrderId())
                 .orElseThrow(() -> new ResourceNotFoundException("Order", "id", orderItemDto.getOrderId()));
         return this.orderItemRepo.findById(orderItemDto.getOrderItemId())
