@@ -86,6 +86,7 @@ public class ProductServiceImpl implements ProductService {
             @CacheEvict(value = "allProductsPerCategoryPage", allEntries = true)
     })
     public ProductDto updateProduct(ProductDto productDto, Long productId) {
+        // dummy comment
         Product product = dtoToProduct(productDto);
         Product productInDB = this.productRepo.findById(productId).
                 orElseThrow(() -> new ResourceNotFoundException(
